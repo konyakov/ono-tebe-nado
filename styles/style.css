@@ -90,7 +90,8 @@
 
 .cover {
   position: relative;
-  background: url(../images/cover.jpg), lightgray 50% / cover no-repeat;
+  background: url(../images/cover.jpg);
+  background-size: contain;
   height: 757px;
 }
 
