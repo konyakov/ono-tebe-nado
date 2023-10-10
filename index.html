@@ -13,16 +13,16 @@
     <header class="header">
       <nav class="header__menu">
         <ul class="header__links-list">
-          <li class="header__links-list-item header__links-list-item_no-bullit">
-            <a href="javascript:" class="header__link header__link_active"
+          <li class="header__links-list-item">
+            <a href="#main" class="header__link header__link_active"
               >главная</a
             >
           </li>
-          <li class="header__links-list-item">
-            <a href="javascript:" class="header__link">посмотреть лоты</a>
+          <li>
+            <a href="#lots" class="header__link">посмотреть лоты</a>
           </li>
-          <li class="header__links-list-item">
-            <a href="javascript:" class="header__link">об аукционе</a>
+          <li>
+            <a href="#about" class="header__link">об аукционе</a>
           </li>
         </ul>
       </nav>
@@ -35,11 +35,14 @@
       </a>
       <div class="header__address">
         <address class="address">
-          <a href="tel:+99995555555">+9 999 555 5555</a><br><a
-            href="mailto:info@sobaka.ge"
-            >info@sobaka.ge</a
+          <a class="header__address-link" href="tel:+99995555555">+9 999 555 5555</a>
+          <a class="header__address-link"
+            href="mailto:info@sobaka.ge">info@sobaka.ge</a
           ><br>наб. Принсенграхт 263-265, Амстердам
-        </address>
+        </address><!--здесь использовал <br> для того, чтобы соответствовать макету,
+        иначе без него наб. будет после емейла, и все поедет. тут либо наб. Принсенграхт
+      обернуть в <span> и в стилях ему задать nowrap, либо символ переноса <br> как
+      я сделал в данном случае-->
       </div>
     </header>
 
@@ -50,13 +53,13 @@
         <div class="overlay"></div>
 
         <h1 class="cover__title">
-          <span class="aligned-text"
+          <span class="cover__title-top"
             >О<span class="letter-spacing-extended">н</span>о</span
           >
-          <span class="aligned-text text-center"
+          <span class="cover__title-middle aligned-text_center"
             >те<span class="letter-spacing-extended">б</span>е</span
           >
-          <span class="aligned-text text-right"
+          <span class="cover__title-bottom aligned-text_right"
             ><span class="letter-spacing-extended">н</span>адо</span
           >
         </h1>
@@ -65,7 +68,12 @@
           <div class="cover__description-text">
             Аукцион вещей, в которые никто не верил
           </div>
-          <a href="javascript:" class="bet-button">Сделать ставку</a>
+          <a href="#doit" class="bet-button">Сделать ставку</a>
+          <!-- Для код ревьюера: здесь в классе bet-button
+            делается text-decoration:none только лишь потому,
+            что это ССЫЛКА стилизованная под кнопку,
+            а не кнопка <button> для которого не надо
+            делать подобной процедуры! http://joxi.ru/VrwXv54UgnjnVm -->
         </div>
       </section>
 
@@ -76,7 +84,7 @@
 
         <ul class="lots__card-list">
           <li class="lots__card-list-item">
-            <a href="javascript:" class="card-link">
+            <a href="#film" class="card-link">
               <article>
                 <div class="card card_type_film">
                   <div class="overlay"></div>
@@ -94,7 +102,7 @@
           </li>
 
           <li class="lots__card-list-item">
-            <a href="javascript:" class="card-link">
+            <a href="#book" class="card-link">
               <article>
                 <div class="card card_type_book">
                   <div class="overlay"></div>
@@ -116,7 +124,7 @@
           </li>
 
           <li class="lots__card-list-item">
-            <a href="javascript:" class="card-link">
+            <a href="#picture" class="card-link">
               <article>
                 <div class="card card_type_picture">
                   <div class="overlay"></div>
@@ -135,9 +143,8 @@
           </li>
         </ul>
 
-        <div class="lots__look-more-link">
-          <a href="javascript:">посмотреть больше</a>
-        </div>
+          <a class="lots__look-more-link" href="#more">посмотреть больше</a>
+
       </section>
 
       <!--для секции с информацией об аукционе-->
@@ -176,7 +183,8 @@
 
     <footer class="footer">
       <address class="address">
-        <a href="tel:+99995555555">+9 999 555 5555</a><br><a
+        <a class="footer__address-link" href="tel:+99995555555">+9 999 555 5555</a>
+        <a class="footer__address-link"
           href="mailto:info@sobaka.ge"
           >info@sobaka.ge</a
         ><br>наб. Принсенграхт 263-265, Амстердам
@@ -186,18 +194,18 @@
           <ul class="footer__menu-list">
             <li class="footer__menu-list-item">
               <a
-                href="javascript:"
+                href="#main"
                 class="footer__menu-link footer__menu-link_active"
                 >главная</a
               >
             </li>
             <li class="footer__menu-list-item">
-              <a href="javascript:" class="footer__menu-link"
+              <a href="#lots" class="footer__menu-link"
                 >посмотреть лоты</a
               >
             </li>
             <li class="footer__menu-list-item">
-              <a href="javascript:" class="footer__menu-link">об аукционе</a>
+              <a href="#about" class="footer__menu-link">об аукционе</a>
             </li>
           </ul>
         </nav>
@@ -205,7 +213,7 @@
 
       <ul class="footer__social-list">
         <li class="footer__social-list-item">
-          <a href="javascript:" class="footer__social-link"
+          <a href="https://youtube.com/" class="footer__social-link"
             ><img
               class="footer__social-icon"
               src="./images/yt.svg"
@@ -213,12 +221,12 @@
           ></a>
         </li>
         <li class="footer__social-list-item">
-          <a href="javascript:" class="footer__social-link"
+          <a href="https://vk.com/" class="footer__social-link"
             ><img class="footer__social-icon" src="./images/vk.svg" alt="VK"
           ></a>
         </li>
         <li class="footer__social-list-item">
-          <a href="javascript:" class="footer__social-link"
+          <a href="https://pinterest.com/" class="footer__social-link"
             ><img
               class="footer__social-icon"
               src="./images/pinterest.svg"
