@@ -32,3 +32,15 @@ a {
 img {
   width: 100%;
 }
+
+address {
+  font-style: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
